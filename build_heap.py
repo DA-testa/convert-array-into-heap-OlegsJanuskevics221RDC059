@@ -48,7 +48,7 @@ def main():
 
     # calls function to assess the data 
     # and give back all swaps
-    swaps = build_heap(data)
+    swaps, count = build_heap(n, data)
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
@@ -56,8 +56,8 @@ def main():
 
     # output all swaps
     print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    for swap swaps:
+        print(swap[0], swap[1])
 
 
 if __name__ == "__main__":
