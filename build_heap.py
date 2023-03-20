@@ -38,11 +38,26 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-
+    
     # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
-
+    text=input("Enter I or F: ")
+    if "I" in text:
+        n = int(input())
+        data = list(map(int, input().split()))
+    elif "F" in text:
+        filename=input()
+        file='./test/'+filename
+        if "a" not in filename:
+            try:
+                with open(file) as f:
+                    n=int(f.readline())
+                    data=list(map(int,f.readline().split()))
+                    except Exception as e:
+                        print("Error:", str(e))
+                        return
+        else:
+            print("Error: invalid filename")
+            return
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
 
