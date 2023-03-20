@@ -1,7 +1,7 @@
 # python3
 from math import floor
 
-def build_heap(data):
+def build_heap(n, data):
     count=0
     swaps = []
     # TODO: Creat heap and heap sort
@@ -11,7 +11,7 @@ def build_heap(data):
         swaps = sift_down(i, size, data, swaps, count)
     return swaps, count
 
-def sift_down(i, size, data, swaps):
+def sift_down(i, size, data, swaps, count):
     minIndex = i
     l = LeftChild(i+1)
     if l <= size and data[l] < data[minIndex]:
@@ -21,7 +21,7 @@ def sift_down(i, size, data, swaps):
         minIndex = r
     if i != minIndex:
         data[i], data[minIndex] = data[minIndex], data[i]
-        count = count+1
+        count +=1
         swaps.append((i,minIndex))
         swaps, count, data = sift_down(minIndex, size,data, swaps, count)
     return swaps, count, data
