@@ -6,7 +6,7 @@ def build_heap(data):
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
 
-
+    
     return swaps
 
 
@@ -16,7 +16,7 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
 
-
+    
     # input from keyboard
     n = int(input())
     data = list(map(int, input().split()))
