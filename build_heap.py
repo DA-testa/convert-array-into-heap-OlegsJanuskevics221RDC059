@@ -52,7 +52,7 @@ def main():
                 with open(file) as f:
                     n=int(f.readline())
                     data=list(map(int,f.readline().split()))
-                    except Exception as e:
+            except Exception as e:
                         print("Error:", str(e))
                         return
         else:
